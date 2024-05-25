@@ -22,11 +22,8 @@ const App = () => {
       <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
-      <section>
-        <Portfolio />
-      </section>
+      <Portfolio />
       <section id="Contact">Contact</section>
-
       {/* <Test />
       <Test /> */}
     </div>

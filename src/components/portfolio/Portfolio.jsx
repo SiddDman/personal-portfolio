@@ -1,4 +1,6 @@
 import "./portfolio.scss";
+import { useRef } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const items = [
   {
@@ -9,7 +11,7 @@ const items = [
   },
   {
     id: 2,
-    title: "Notes App ",
+    title: "Notes App",
     img: "/public/notes.png",
     desc: "I developed a note-taking website that allows users to securely store and access their notes anytime by logging in. Each user can only view and manage their own notes, ensuring privacy and security. I used MongoDB to store the notes, implemented a login page, and secured passwords with hashing. The project leverages a tech stack of React for the frontend, and Node.js with Express for the backend.This project highlights my skills in full-stack web development and secure user authentication.",
   },
@@ -32,8 +34,24 @@ const Single = ({ item }) => {
 };
 
 const Portfolio = () => {
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"],
+  });
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+  });
+
   return (
-    <div className="portfolio">
+    <div className="portfolio" ref={ref}>
+      <div className="progress">
+        <h1>Featured Works</h1>
+        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+      </div>
       {items.map((item) => (
         <Single item={item} key={item.id} />
       ))}
