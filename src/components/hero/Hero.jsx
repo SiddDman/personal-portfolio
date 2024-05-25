@@ -1,4 +1,4 @@
-import { motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 import "./hero.scss";
 
 const textVariants = {
@@ -34,7 +34,7 @@ const sliderVariants = {
       repeat: Infinity,
       repeatType: "mirror",
       duration: 15,
-    //   type: "spring",
+      //   type: "spring",
     },
   },
 };
