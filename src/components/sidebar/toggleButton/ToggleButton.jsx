@@ -1,7 +1,5 @@
-const ToggleButton = () => {
-  return <button>
-    ToggleButton</button>;
-    
+const ToggleButton = ({ setOpen }) => {
+  return <button onClick={() => setOpen((prev) => !prev)}>ToggleButton</button>;
 };
 
 export default ToggleButton;
