@@ -63,7 +63,7 @@ const Services = () => {
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>
+            <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>
             Business.
           </h1>
           <button>WHAT WE DO?</button>
@@ -82,7 +82,9 @@ const Services = () => {
             explicabo eos, doloremque blanditiis sint modi harum quisquam
             officia ea. Inventore, rerum!
           </p>
+          <button>Go</button>
         </motion.div>
+
         <motion.div
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
@@ -94,7 +96,9 @@ const Services = () => {
             explicabo eos, doloremque blanditiis sint modi harum quisquam
             officia ea. Inventore, rerum!
           </p>
+          <button>Go</button>
         </motion.div>
+
         <motion.div
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
@@ -106,7 +110,9 @@ const Services = () => {
             explicabo eos, doloremque blanditiis sint modi harum quisquam
             officia ea. Inventore, rerum!
           </p>
+          <button>Go</button>
         </motion.div>
+
         <motion.div
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
@@ -118,7 +124,9 @@ const Services = () => {
             explicabo eos, doloremque blanditiis sint modi harum quisquam
             officia ea. Inventore, rerum!
           </p>
+          <button>Go</button>
         </motion.div>
+        
       </motion.div>
     </motion.div>
   );
