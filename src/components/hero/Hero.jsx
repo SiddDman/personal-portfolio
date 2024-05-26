@@ -24,6 +24,20 @@ const textVariants = {
   },
 };
 
+const imgVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 const sliderVariants = {
   initial: {
     x: 0,
@@ -52,17 +66,23 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>SIDDHARTH DHIMAN</motion.h2>
           <motion.h1 variants={textVariants}>Web and UI designer</motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <a href="#Portfolio">
+              <motion.button variants={textVariants}>
+                See the Latest Works
+              </motion.button>
+            </a>
+            <a href="#Contact">
+              <motion.button variants={textVariants}>Contact Me</motion.button>
+            </a>
           </motion.div>
-          <motion.img
-            variants={textVariants}
-            animate="scrollButton"
-            src="/scroll.png"
-            alt=""
-          />
+          <a href="#Services">
+            <motion.img
+              variants={textVariants}
+              animate="scrollButton"
+              src="/scroll.png"
+              alt=""
+            />
+          </a>
         </motion.div>
       </div>
       <motion.div
@@ -73,9 +93,14 @@ const Hero = () => {
       >
         FrontEnd Developer Tech Enthusiast Gamer
       </motion.div>
-      <div className="imageContainer">
+      <motion.div
+        className="imageContainer"
+        variants={imgVariants}
+        initial="initial"
+        animate="animate"
+      >
         <img className="pic" src="/hero.png" alt="" />
-      </div>
+      </motion.div>
     </div>
   );
 };
