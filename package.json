@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://SiddDman.github.io/personal-portfolio",
+  "homepage": "https://sidddman.github.io/personal-portfolio/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

@@ -9,7 +9,7 @@ const Parallax = ({ type }) => {
     offset: ["start start", "end start"],
   });
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
 
   return (
     <div
@@ -17,13 +17,13 @@ const Parallax = ({ type }) => {
       ref={ref}
       style={{
         background:
-          type === "services"
+          type === "skills"
             ? "linear-gradient(180deg,#111132,#0c0c1d)"
             : "linear-gradient(180deg,#111132,#505064)",
       }}
     >
       <motion.h1 style={{ y: yText }}>
-        {type === "services" ? "What we Do?" : "What we did?"}
+        {type === "skills" ? "Skills" : "What I have done?"}
       </motion.h1>
       <motion.div className="mountains"></motion.div>
       <motion.div
@@ -31,7 +31,7 @@ const Parallax = ({ type }) => {
         style={{
           y: yBg,
           backgroundImage: `url(
-              ${type === "services" ? "/planets.png" : "/sun.png"}
+              ${type === "skills" ? "/planets.png" : "/sun.png"}
             )`,
         }}
       ></motion.div>

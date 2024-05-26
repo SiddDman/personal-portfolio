@@ -21,16 +21,28 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="https://www.linkedin.com/in/siddharthdhiman/">
+          <a
+            href="https://www.linkedin.com/in/siddharthdhiman/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/linkedin.png" alt="" />
           </a>
-          <a href="https://github.com/SiddDman">
+          <a
+            href="https://github.com/SiddDman"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img className="github-logo" src="/github.gif" alt="" />
           </a>
-          <a href="http://www.youtube.com/@SiddharthDhiman">
+          <a
+            href="https://www.youtube.com/@SiddharthDhiman"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/youtube.png" alt="" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
             <img src="/instagram.png" alt="" />
           </a>
         </motion.div>

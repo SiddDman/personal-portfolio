@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import "./services.scss";
+import "./skills.scss";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const variants = {
@@ -23,7 +23,7 @@ const variants = {
   },
 };
 
-const Services = () => {
+const Skills = () => {
   const ref = useRef();
   const controls = useAnimation();
   const isInView = useInView(ref, { margin: "-100px" });
@@ -37,7 +37,7 @@ const Services = () => {
 
   return (
     <motion.div
-      className="services"
+      className="skills"
       variants={variants}
       initial="initial"
       // animate="animate"
@@ -66,8 +66,12 @@ const Services = () => {
             <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>
             Business.
           </h1>
-          <a href="#Portfolio">
-            <button>WHAT WE DO?</button>
+          <a
+            href="https://drive.google.com/file/d/1yoJMO6kOcoC30eflssp7qwlDeQvkByIC/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button>Resume</button>
           </a>
         </div>
       </motion.div>
@@ -133,4 +137,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Skills;
