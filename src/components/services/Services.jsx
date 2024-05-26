@@ -1,12 +1,16 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import "./services.scss";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const variants = {
   initial: {
     x: -500,
-    y: 100,
+    y: -100,
     opacity: 0,
+    transition: {
+      duration: 0,
+      staggerChildren: 0.1,
+    },
   },
   animate: {
     x: 0,
@@ -21,8 +25,15 @@ const variants = {
 
 const Services = () => {
   const ref = useRef();
-
+  const controls = useAnimation();
   const isInView = useInView(ref, { margin: "-100px" });
+  useEffect(() => {
+    if (isInView) {
+      controls.start("animate");
+    } else {
+      controls.start("initial");
+    }
+  }, [isInView, controls]);
 
   return (
     <motion.div
@@ -32,7 +43,8 @@ const Services = () => {
       // animate="animate"
       // whileInView="animate"
       ref={ref}
-      animate={isInView && "animate"}
+      // animate={isInView && "animate"}
+      animate={controls}
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
