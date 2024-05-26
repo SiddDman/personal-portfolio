@@ -22,7 +22,24 @@ const variants = {
     opacity: 1,
     transition: {
       duration: 1,
-      staggerChildren: 0.1,
+    },
+  },
+};
+
+const barVariants = {
+  initial: {
+    x: 2000,
+    opacity: 0,
+    transition: {
+      duration: 0.01,
+      type: "spring",
+    },
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
     },
   },
 };
@@ -56,7 +73,11 @@ const Education = () => {
         animate={controls}
       >
         <h1>Education</h1>
-        <motion.div className="progressBar"></motion.div>
+        <motion.div
+          className="progressBar"
+          variants={barVariants}
+          animate={controls}
+        ></motion.div>
       </motion.div>
       <section>
         <div className="container">
