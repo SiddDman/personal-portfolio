@@ -82,6 +82,7 @@
                 
                 h2{
                     font-size: 50px;
+
                     @include mobile{
                         font-size: 36px;
                     }
@@ -91,13 +92,13 @@
                     color: gray;
                     font-size: 18px;
                     line-height: 25px;
-                    font-family: "Merriweather", sans-serif;
-
-                    @include mbile{
+                    font-family: "Merriweather",sans-serif;
+                    
+                    @include mobile{
                         font-size: 16px;
                     }
                 }
-
+                
                 button{
                     background-color: orange;
                     border: none;
@@ -106,7 +107,7 @@
                     width: 200px;
                     cursor: pointer;
                     font-size: 20px;
-                    font-family: "Poppins",sans-serif;
+                    font-family: "Merriweather",sans-serif;
                 }
             }
         }
