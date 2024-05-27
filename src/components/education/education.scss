@@ -47,7 +47,7 @@
             .imageContainer {
                 flex: 1;
                 width: 60%;
-                height: 50%;
+                height: 60%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -60,8 +60,8 @@
 
                 img {
                     width: 100%;
-                    height: 80%;
-                    object-fit: cover;
+                    height: 100%;
+                    object-fit: contain;
                     
                     @include mobile {
                         object-fit: contain;
@@ -74,6 +74,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
+                margin-top:20px;
 
                 @include mobile {
                     transform: none !important;

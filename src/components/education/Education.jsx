@@ -51,7 +51,7 @@ const Education = () => {
     target: ref,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 250]);
+  const y = useTransform(scrollYProgress, [0, 1], [-200, 200]);
   const isInView = useInView(ref, { margin: "-100px" });
 
   useEffect(() => {
