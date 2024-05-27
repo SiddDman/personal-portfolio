@@ -67,7 +67,7 @@ const Skills = () => {
             Business.
           </h1>
           <a
-            href="https://drive.google.com/file/d/1yoJMO6kOcoC30eflssp7qwlDeQvkByIC/view?usp=sharing"
+            href="https://drive.google.com/file/d/1VdOUR6V57ITKGrohZFuQ9x_QLcBt6caA/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
