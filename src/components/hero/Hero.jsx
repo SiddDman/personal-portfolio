@@ -100,7 +100,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        <img className="pic" src="/hero.png" alt="" />
+        <img src="/hero.png" alt="" />
       </motion.div>
     </div>
   );
