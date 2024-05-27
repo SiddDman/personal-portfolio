@@ -39,7 +39,7 @@ const Single = ({ item }) => {
     target: ref,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [-500, 450]);
   return (
     <section>
       <div className="container">
@@ -56,7 +56,7 @@ const Single = ({ item }) => {
                   opacity: `${(item.id === 5) | (item.id === 1) ? 0 : 1}`,
                 }}
               >
-                See Demo
+                See Code
               </button>
             </a>
           </motion.div>

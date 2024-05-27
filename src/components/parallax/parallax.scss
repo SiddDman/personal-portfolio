@@ -10,8 +10,8 @@
     overflow: hidden;
 
     h1{
-        font-size: 100px;
-        
+        font-size: 90px;
+
         @include mobile{
             font-size: 72px;
             text-align: center;
@@ -26,6 +26,7 @@
         height: 100%;
         position: absolute;
         z-index: 3;
+        
         @include mobile {
             background-size: contain;
             background-repeat:no-repeat ;
@@ -39,6 +40,7 @@
         height: 100%;
         position: absolute;
         z-index: 2;
+
         @include mobile {
             background-size: contain;
             background-repeat: no-repeat;
