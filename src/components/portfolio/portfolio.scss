@@ -59,7 +59,7 @@
                 img{
                     width: 100%;
                     height:100%;
-                    object-fit: cover;
+                    object-fit: contain;
                     
                     @include mobile{
                         object-fit: contain;
@@ -91,8 +91,9 @@
                     color: gray;
                     font-size: 18px;
                     line-height: 25px;
+                    font-family: "Merriweather", sans-serif;
 
-                    @include mobile{
+                    @include mbile{
                         font-size: 16px;
                     }
                 }
