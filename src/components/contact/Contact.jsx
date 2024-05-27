@@ -70,7 +70,7 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let{"'"}s Work Together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>dhiman12siddharth@gmail.com</span>
+          <span>siddharthdhiman@duck.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
