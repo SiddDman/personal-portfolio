@@ -44,7 +44,7 @@ const sliderVariants = {
     x: 0,
   },
   animate: {
-    x: "-675%",
+    x: "-700%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
@@ -69,11 +69,7 @@ const Hero = () => {
           <div className="typeWriter">
             <motion.h1 variants={textVariants}>
               <Typewriter
-                words={[
-                  " Web and UI Designer",
-                  "Software Engineer",
-                  "The IT Guy",
-                ]}
+                words={[" Web Developer", "Software Engineer", "The IT Guy"]}
                 loop={true}
                 cursor
                 cursorStyle="|"

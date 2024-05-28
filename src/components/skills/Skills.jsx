@@ -161,7 +161,7 @@ const Skills = () => {
         </div>
       </motion.div>
       <motion.div className="logoContainer" variants={variants}>
-        <div className="textBox">SKILLS</div>
+        <div className="textBox">Skills</div>
         <div className="container">
           {technologies.map((tech) => (
             <div className="box" key={tech.id}>

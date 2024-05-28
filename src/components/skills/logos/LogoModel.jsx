@@ -11,7 +11,7 @@ const LogoModel = ({ icon }) => {
   }, []);
 
   return (
-    <Float speed={2} floatIntensity={6} rotationIntensity={4}>
+    <Float speed={2} floatIntensity={6} rotationIntensity={3}>
       <ambientLight intensity={0.1} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh
