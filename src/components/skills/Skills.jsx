@@ -9,82 +9,82 @@ const technologies = [
   {
     id: 1,
     name: "React",
-    icon: "/public/reactjs.png",
+    icon: "/reactjs.png",
   },
   {
     id: 2,
     name: "NodeJs",
-    icon: "/public/nodejs.png",
+    icon: "/nodejs.png",
   },
   {
     id: 3,
     name: "MongoDB",
-    icon: "/public/mongodb.png",
+    icon: "/mongodb.png",
   },
   {
     id: 4,
     name: "HTML5",
-    icon: "/public/html.png",
+    icon: "/html.png",
   },
   {
     id: 5,
     name: "CSS",
-    icon: "/public/css.png",
+    icon: "/css.png",
   },
   {
     id: 6,
     name: "JavaScript",
-    icon: "/public/javascript.png",
+    icon: "/javascript.png",
   },
   {
     id: 7,
     name: "MySQL",
-    icon: "/public/mysql.png",
+    icon: "/mysql.png",
   },
   {
     id: 8,
     name: "Hadoop",
-    icon: "/public/hadoop-logo.png",
+    icon: "/hadoop-logo.png",
   },
   {
     id: 9,
     name: "Python",
-    icon: "/public/python.png",
+    icon: "/python.png",
   },
   {
     id: 10,
     name: "R",
-    icon: "/public/r.png",
+    icon: "/r.png",
   },
   {
     id: 11,
     name: "C",
-    icon: "/public/c.png",
+    icon: "/c.png",
   },
   {
     id: 12,
     name: "C++",
-    icon: "/public/c++.png",
+    icon: "/c++.png",
   },
   {
     id: 13,
     name: "C#",
-    icon: "/public/c-sharp.png",
+    icon: "/c-sharp.png",
   },
   {
     id: 14,
     name: "Unity",
-    icon: "/public/unity.png",
+    icon: "/unity.png",
   },
   {
     id: 15,
     name: "Git",
-    icon: "/public/git.png",
+    icon: "/git.png",
   },
   {
     id: 16,
     name: "Github",
-    icon: "/public/github.png",
+    icon: "/github.png",
   },
 ];
 
