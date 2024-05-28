@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 import "./hero.scss";
 
 const textVariants = {
@@ -65,7 +66,23 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>
             HI, I{"'"}M SIDDHARTH DHIMAN
           </motion.h2>
-          <motion.h1 variants={textVariants}>Web and UI designer</motion.h1>
+          <div className="typeWriter">
+            <motion.h1 variants={textVariants}>
+              <Typewriter
+                words={[
+                  " Web and UI Designer",
+                  "Software Engineer",
+                  "The IT Guy",
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </motion.h1>
+          </div>
           <motion.div variants={textVariants} className="buttons">
             <a href="#Portfolio">
               <motion.button variants={textVariants}>

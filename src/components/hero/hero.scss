@@ -38,14 +38,17 @@
                     font-size: 25px;
                 }
             }
+            
+            .typeWriter{
+                height: 30%;
 
-            h1{
-                font-size: 88px;
-
-                @include mobile {
-                    font-size: 36px;
-               }               
-             }
+                h1{
+                    font-size: 88px;
+                    @include mobile {
+                        font-size: 36px;
+                   }               
+                 }
+            }
 
             .buttons{
                 display: flex;
@@ -60,6 +63,11 @@
                     cursor: pointer;
                     font-weight: 300;
                     font-family: "Merriweather",sans-serif;
+                }
+
+                button:hover{
+                    background-color: white;
+                    color:#111132;
                 }
             }
 

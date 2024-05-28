@@ -1,6 +1,92 @@
-import { useRef, useEffect } from "react";
 import "./skills.scss";
+import { useRef, useEffect, Suspense } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Environment, Preload } from "@react-three/drei";
+import LogoModel from "./logos/LogoModel";
+import CanvasLoader from "./logos/CanvasLoader";
+const technologies = [
+  {
+    id: 1,
+    name: "React",
+    icon: "/public/reactjs.png",
+  },
+  {
+    id: 2,
+    name: "NodeJs",
+    icon: "/public/nodejs.png",
+  },
+  {
+    id: 3,
+    name: "MongoDB",
+    icon: "/public/mongodb.png",
+  },
+  {
+    id: 4,
+    name: "HTML5",
+    icon: "/public/html.png",
+  },
+  {
+    id: 5,
+    name: "CSS",
+    icon: "/public/css.png",
+  },
+  {
+    id: 6,
+    name: "JavaScript",
+    icon: "/public/javascript.png",
+  },
+  {
+    id: 7,
+    name: "MySQL",
+    icon: "/public/mysql.png",
+  },
+  {
+    id: 8,
+    name: "Hadoop",
+    icon: "/public/hadoop-logo.png",
+  },
+  {
+    id: 9,
+    name: "Python",
+    icon: "/public/python.png",
+  },
+  {
+    id: 10,
+    name: "R",
+    icon: "/public/r.png",
+  },
+  {
+    id: 11,
+    name: "C",
+    icon: "/public/c.png",
+  },
+  {
+    id: 12,
+    name: "C++",
+    icon: "/public/c++.png",
+  },
+  {
+    id: 13,
+    name: "C#",
+    icon: "/public/c-sharp.png",
+  },
+  {
+    id: 14,
+    name: "Unity",
+    icon: "/public/unity.png",
+  },
+  {
+    id: 15,
+    name: "Git",
+    icon: "/public/git.png",
+  },
+  {
+    id: 16,
+    name: "Github",
+    icon: "/public/github.png",
+  },
+];
 
 const variants = {
   initial: {
@@ -48,23 +134,22 @@ const Skills = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          focus on helping your brand grow <br />
-          and move forward
+          A user interface is like a joke. If you have to explain it,
+          <br />
+          it{"'"}s not that good.
         </p>
         <hr />
       </motion.div>
 
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Unique </motion.b>Ideas
-          </h1>
-        </div>
-        <div className="title">
-          <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>
-            Business.
+            <motion.p whileHover={{ color: "orange" }}>Bringing Ideas</motion.p>
+            to the
+            <motion.b whileHover={{ color: "orange", fontStyle: "italic" }}>
+              {" "}
+              Web.
+            </motion.b>
           </h1>
           <a
             href="https://drive.google.com/file/d/1uoD8hWbC0yGML61RBXsw3O4-gJPrXP9m/view?usp=sharing"
@@ -75,63 +160,27 @@ const Skills = () => {
           </a>
         </div>
       </motion.div>
-
-      <motion.div className="listContainer" variants={variants}>
-        <motion.div
-          className="box"
-          whileHover={{ backgroundColor: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
-            voluptate doloribus quis maxime dolore at culpa laudantium iure,
-            explicabo eos, doloremque blanditiis sint modi harum quisquam
-            officia ea. Inventore, rerum!
-          </p>
-          <button>Go</button>
-        </motion.div>
-
-        <motion.div
-          className="box"
-          whileHover={{ backgroundColor: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
-            voluptate doloribus quis maxime dolore at culpa laudantium iure,
-            explicabo eos, doloremque blanditiis sint modi harum quisquam
-            officia ea. Inventore, rerum!
-          </p>
-          <button>Go</button>
-        </motion.div>
-
-        <motion.div
-          className="box"
-          whileHover={{ backgroundColor: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
-            voluptate doloribus quis maxime dolore at culpa laudantium iure,
-            explicabo eos, doloremque blanditiis sint modi harum quisquam
-            officia ea. Inventore, rerum!
-          </p>
-          <button>Go</button>
-        </motion.div>
-
-        <motion.div
-          className="box"
-          whileHover={{ backgroundColor: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
-            voluptate doloribus quis maxime dolore at culpa laudantium iure,
-            explicabo eos, doloremque blanditiis sint modi harum quisquam
-            officia ea. Inventore, rerum!
-          </p>
-          <button>Go</button>
-        </motion.div>
+      <motion.div className="logoContainer" variants={variants}>
+        <div className="textBox">SKILLS</div>
+        <div className="container">
+          {technologies.map((tech) => (
+            <div className="box" key={tech.id}>
+              <Canvas
+                gl={{ preserveDrawingBuffer: true }}
+                camera={{ position: [0, 0, 5] }}
+              >
+                <Suspense fallback={<CanvasLoader />}>
+                  <ambientLight intensity={0.5} />
+                  <pointLight position={[10, 10, 10]} />
+                  <OrbitControls />
+                  <Environment preset="dawn" />
+                  <LogoModel icon={tech.icon} />
+                </Suspense>
+                <Preload all />
+              </Canvas>
+            </div>
+          ))}
+        </div>
       </motion.div>
     </motion.div>
   );

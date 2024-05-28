@@ -1,0 +1,20 @@
+.test {
+    display: flex;
+    border: 2px solid white;
+    height: 40vh;
+    flex-direction: row;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border:10px solid red;
+        gap: 10px;
+
+        .box {
+            border:5px solid cyan;
+            width: 150px; // Adjust width to fit the model
+            height: 100px; // Adjust height to fit the model
+        }
+    }
+}

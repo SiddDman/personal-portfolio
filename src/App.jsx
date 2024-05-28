@@ -7,7 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Skills from "./components/skills/Skills";
-// import Test from "./Test";
+import Test from "./Test";
 
 const App = () => {
   return (
@@ -33,7 +33,9 @@ const App = () => {
       <section id="Contact">
         <Contact />
       </section>
-      {/* <Test /> */}
+      {/* <section>
+        <Test />
+      </section> */}
     </div>
   );
 };

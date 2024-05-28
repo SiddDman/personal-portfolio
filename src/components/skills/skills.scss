@@ -25,16 +25,18 @@
             text-align: center;
             flex-direction: column;
         }
-
+        
         p{
             font-weight: 200;
-            font-size: 20px;
+            font-size: 18px;
+            font-family: "Merriweather",sans-serif;
+            font-style: italic;
             color: gray;
             text-align: right;
         }
 
         hr{
-            width: 400px;
+            width: 300px;
             border:none;
             border-top:0.5px solid gray ;
 
@@ -46,11 +48,11 @@
 
 
     .titleContainer{
-        flex:2;
+        flex:1;
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        
         @include mobile{
             width: 100%;
         }
@@ -58,43 +60,57 @@
         .title{
             display: flex;
             align-items: center;
-            gap: 50px;
-
+            gap: 200px;
+            
+            
             @include mobile{
                 flex-direction: column;
                 text-align: center;
                 gap: 20px;
             }
-
+            
             img{
                 width: 300px;
                 height: 100px;
                 border-radius: 30px;
                 object-fit: cover;
-
+                
                 @include mobile{
                     width: 200px;
                     height: 50px;
                 }
             }
-
+            
             h1{
-                font-size: 96px;
+                font-size: 90px;
                 font-weight: 100;
-
+                font-family: "Merriweather",sans-serif;
+                
                 @include mobile {
                     font-size: 36px;
                 }
+                
+                p{
+                    font-family: "Merriweather",sans-serif;
+                    font-weight:600 ;
+                }
+                
+                b{
+                    font-family: "Merriweather",sans-serif;
+                    font-weight:600;
+                }
             }
-
+            
             button{
-                width: 300px;
+                width:250px;
                 height: 100px;
                 border-radius: 50px;
                 background-color: orange;
+                
                 border: none;
-                font-size: 24px;
+                font-size: 36px;
                 cursor: pointer;
+                font-family: "Merriweather",sans-serif;
 
                 @include mobile{
                     font-size: 16px;
@@ -102,58 +118,54 @@
                     height: 50px;
                 }
             }
-        }
 
+            button:hover{
+                background-color:#ff6f00 ;
+            }
+        }
     }
 
-
-    .listContainer{
+    .logoContainer{
         flex:2;
         display: flex;
-        max-width: 1366px;
-        margin :auto;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        height: 40vh;
+        gap:30px;
+        font-size: 30px;  
+        padding: 50px;
+        color: orange;
 
+        
         @include mobile{
             flex-direction: column;
             width: 100%;
         }
+        
+        .textBox{
+            font-family: "Merriweather", sans-serif;  
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            font-style: italic;
+        }
 
-        .box{
-            padding:50px;
-            border:0.5px solid gray;
+        .container{
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
+            flex-wrap: wrap;
+            // border:2px solid gray;
+            gap: 20px;
+            
             @include mobile{
                 border: none;
                 align-items: center;
                 gap: 20px;
                 padding: 10px;
             }
-
-            p{
-                @include mobile{
-                    display: none;
-                }
-            }
-
-            button{
-                padding: 10px;
-                background-color: orange;
-                border: none;
-                cursor: pointer;
-                margin-top: 20px;
-
-                @include mobile{
-                    margin-top: 10px;
-                    background-color: transparent;
-                    border: 1px solid orange;
-                    border-radius: 5px;
-                    color: orange;
-                    width: 50%;
-                    padding: 5px;
-                }
+            
+            .box{
+                width: 150px; // Adjust width to fit the model
+                height: 100px; // Adjust height to fit the model
             }
         }
     }
