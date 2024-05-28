@@ -1,6 +1,6 @@
 import { Decal, Float } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { TextureLoader } from "three";
 
 const LogoModel = ({ icon }) => {
@@ -31,6 +31,13 @@ const LogoModel = ({ icon }) => {
         <Decal
           position={[0, 0, 1]}
           rotation={[0, 2 * Math.PI, 0]}
+          scale={1.2}
+          flatShading
+          map={texture}
+        />
+        <Decal
+          position={[0, 0, -1]}
+          rotation={[0, Math.PI, 0]}
           scale={1.2}
           flatShading
           map={texture}
