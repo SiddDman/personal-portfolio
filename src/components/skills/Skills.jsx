@@ -2,13 +2,13 @@ import "./skills.scss";
 import { useRef, useEffect, Suspense } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Preload } from "@react-three/drei";
+import { OrbitControls, Environment, Preload, Text } from "@react-three/drei";
 import LogoModel from "./logos/LogoModel";
 import CanvasLoader from "./logos/CanvasLoader";
 const technologies = [
   {
     id: 1,
-    name: "React",
+    name: "ReactJs",
     icon: "/reactjs.png",
   },
   {
@@ -23,7 +23,7 @@ const technologies = [
   },
   {
     id: 4,
-    name: "HTML5",
+    name: "HTML",
     icon: "/html.png",
   },
   {
@@ -43,8 +43,8 @@ const technologies = [
   },
   {
     id: 8,
-    name: "Hadoop",
-    icon: "/hadoop-logo.png",
+    name: "R",
+    icon: "/r.png",
   },
   {
     id: 9,
@@ -53,8 +53,8 @@ const technologies = [
   },
   {
     id: 10,
-    name: "R",
-    icon: "/r.png",
+    name: "Hadoop",
+    icon: "/hadoop-logo.png",
   },
   {
     id: 11,
@@ -178,6 +178,7 @@ const Skills = () => {
                 </Suspense>
                 <Preload all />
               </Canvas>
+              {tech.name}
             </div>
           ))}
         </div>
