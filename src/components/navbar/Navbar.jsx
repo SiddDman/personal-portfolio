@@ -26,24 +26,28 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/linkedin.png" alt="" />
+            <img src="/personal-portfolio/linkedin.png" alt="" />
           </a>
           <a
             href="https://github.com/SiddDman"
             target="_blank"
             rel="noreferrer"
           >
-            <img className="github-logo" src="/github.gif" alt="" />
+            <img
+              className="github-logo"
+              src="/personal-portfolio/github.gif"
+              alt=""
+            />
           </a>
           <a
             href="https://www.youtube.com/@SiddharthDhiman"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/youtube.png" alt="" />
+            <img src="/personal-portfolio/youtube.png" alt="" />
           </a>
           <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-            <img src="/instagram.png" alt="" />
+            <img src="/personal-portfolio/instagram.png" alt="" />
           </a>
         </motion.div>
       </div>

@@ -2,89 +2,89 @@ import "./skills.scss";
 import { useRef, useEffect, Suspense } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Preload, Text } from "@react-three/drei";
+import { OrbitControls, Environment, Preload } from "@react-three/drei";
 import LogoModel from "./logos/LogoModel";
 import CanvasLoader from "./logos/CanvasLoader";
 const technologies = [
   {
     id: 1,
     name: "ReactJs",
-    icon: "/reactjs.png",
+    icon: "/personal-portfolio/reactjs.png",
   },
   {
     id: 2,
     name: "NodeJs",
-    icon: "/nodejs.png",
+    icon: "/personal-portfolio/nodejs.png",
   },
   {
     id: 3,
     name: "MongoDB",
-    icon: "/mongodb.png",
+    icon: "/personal-portfolio/mongodb.png",
   },
   {
     id: 4,
     name: "HTML",
-    icon: "/html.png",
+    icon: "/personal-portfolio/html.png",
   },
   {
     id: 5,
     name: "CSS",
-    icon: "/css.png",
+    icon: "/personal-portfolio/css.png",
   },
   {
     id: 6,
     name: "JavaScript",
-    icon: "/javascript.png",
+    icon: "/personal-portfolio/javascript.png",
   },
   {
     id: 7,
     name: "MySQL",
-    icon: "/mysql.png",
+    icon: "/personal-portfolio/mysql.png",
   },
   {
     id: 8,
     name: "R",
-    icon: "/r.png",
+    icon: "/personal-portfolio/r.png",
   },
   {
     id: 9,
     name: "Python",
-    icon: "/python.png",
+    icon: "/personal-portfolio/python.png",
   },
   {
     id: 10,
     name: "Hadoop",
-    icon: "/hadoop-logo.png",
+    icon: "/personal-portfolio/hadoop-logo.png",
   },
   {
     id: 11,
     name: "C",
-    icon: "/c.png",
+    icon: "/personal-portfolio/c.png",
   },
   {
     id: 12,
     name: "C++",
-    icon: "/c++.png",
+    icon: "/personal-portfolio/c++.png",
   },
   {
     id: 13,
     name: "C#",
-    icon: "/c-sharp.png",
+    icon: "/personal-portfolio/c-sharp.png",
   },
   {
     id: 14,
     name: "Unity",
-    icon: "/unity.png",
+    icon: "/personal-portfolio/unity.png",
   },
   {
     id: 15,
     name: "Git",
-    icon: "/git.png",
+    icon: "/personal-portfolio/git.png",
   },
   {
     id: 16,
     name: "Github",
-    icon: "/github.png",
+    icon: "/personal-portfolio/github.png",
   },
 ];
 
@@ -166,7 +166,7 @@ const Skills = () => {
           {technologies.map((tech) => (
             <div className="box" key={tech.id}>
               <Canvas
-                gl={{ preserveDrawingBuffer: true }}
+                gl={{ preserveDrawingBuffer: true, alpha: true }}
                 camera={{ position: [0, 0, 5] }}
               >
                 <Suspense fallback={<CanvasLoader />}>

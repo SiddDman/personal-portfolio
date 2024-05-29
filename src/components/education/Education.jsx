@@ -82,7 +82,7 @@ const Education = () => {
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src="/iit_dhn.png" alt="" />
+            <img src="/personal-portfolio/iit_dhn.png" alt="" />
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <p>

@@ -32,7 +32,11 @@ const Parallax = ({ type }) => {
         style={{
           y: yBg,
           backgroundImage: `url(
-              ${type === "skills" ? "/planets.png" : "/sun.png"}
+              ${
+                type === "skills"
+                  ? "/personal-portfolio/planets.png"
+                  : "/personal-portfolio/sun.png"
+              }
             )`,
         }}
       ></motion.div>
