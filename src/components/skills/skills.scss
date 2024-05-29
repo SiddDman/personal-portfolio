@@ -150,6 +150,15 @@
             font-size: 69px;  
             font-weight: 400;
             font-style: italic;
+            
+            @include mobile{
+                writing-mode: horizontal-tb;
+                rotate: 0deg;
+                font-size: 69px;  
+                font-weight: 400;
+                font-style: italic;
+
+            }
         }
 
         .container{
@@ -158,18 +167,24 @@
             // border:2px solid gray;
             gap:10px;
             
+            
             @include mobile{
                 border: none;
                 align-items: center;
                 gap: 20px;
+                width: 100vw;
+                height: 40vh;
+                object-fit: contain;
                 padding: 10px;
+                overflow-x: hidden;
+
             }
             
             .box{
                 width: 150px; // Adjust width to fit the model
                 height: 150px; // Adjust height to fit the model
                 font-family: "Merriweather", sans-serif;
-                font-size: 14px;            
+                font-size: 14px;      
             }
         }
     }
