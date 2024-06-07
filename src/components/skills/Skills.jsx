@@ -7,44 +7,54 @@ import LogoModel from "./logos/LogoModel";
 import CanvasLoader from "./logos/CanvasLoader";
 const technologies = [
   {
-    id: 1,
+    id: 2,
+    name: "NextJs",
+    icon: "/personal-portfolio/nextjs.png",
+  },
+  {
+    id: 2,
     name: "ReactJs",
     icon: "/personal-portfolio/reactjs.png",
   },
   {
-    id: 2,
+    id: 3,
     name: "NodeJs",
     icon: "/personal-portfolio/nodejs.png",
   },
   {
-    id: 3,
+    id: 4,
     name: "MongoDB",
     icon: "/personal-portfolio/mongodb.png",
   },
   {
-    id: 4,
+    id: 5,
     name: "HTML",
     icon: "/personal-portfolio/html.png",
   },
   {
-    id: 5,
+    id: 6,
     name: "CSS",
     icon: "/personal-portfolio/css.png",
   },
   {
-    id: 6,
+    id: 7,
     name: "JavaScript",
     icon: "/personal-portfolio/javascript.png",
   },
   {
-    id: 7,
-    name: "MySQL",
-    icon: "/personal-portfolio/mysql.png",
+    id: 17,
+    name: "TypeScript",
+    icon: "/personal-portfolio/typescript.png",
+  },
+  {
+    id: 17,
+    name: "Tailwind CSS",
+    icon: "/personal-portfolio/tailwind.png",
   },
   {
     id: 8,
-    name: "R",
-    icon: "/personal-portfolio/r.png",
+    name: "MySQL",
+    icon: "/personal-portfolio/mysql.png",
   },
   {
     id: 9,
@@ -56,11 +66,11 @@ const technologies = [
     name: "Hadoop",
     icon: "/personal-portfolio/hadoop-logo.png",
   },
-  {
-    id: 11,
-    name: "C",
-    icon: "/personal-portfolio/c.png",
-  },
+  // {
+  //   id: 11,
+  //   name: "C",
+  //   icon: "/personal-portfolio/c.png",
+  // },
   {
     id: 12,
     name: "C++",
@@ -81,11 +91,11 @@ const technologies = [
     name: "Git",
     icon: "/personal-portfolio/git.png",
   },
-  {
-    id: 16,
-    name: "Github",
-    icon: "/personal-portfolio/github.png",
-  },
+  // {
+  //   id: 16,
+  //   name: "Github",
+  //   icon: "/personal-portfolio/github.png",
+  // },
 ];
 
 const variants = {
