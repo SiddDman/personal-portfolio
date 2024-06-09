@@ -13,6 +13,14 @@ const items = [
   },
   {
     id: 2,
+    title: "Meet Ease",
+    img: "/personal-portfolio/meet-ease.png",
+    desc: "Video Calling Platform for you to contact clients and friends.",
+    github_link: "https://github.com/SiddDman/MeetEase",
+    website: "https://meet-ease-phi.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Prompt Share",
     img: "/personal-portfolio/prompt-share.png",
     desc: "Developed a prompt sharing website using Next.js and Tailwind CSS, featuring a simple and intuitive user interface. Integrated MongoDB for efficient prompt storage and management. Utilized Google OAuth for secure user authentication. The homepage displays all prompts, allowing users to copy them easily. Users can view prompts specific to them or others, and manage their prompts by editing or deleting them in the profile section. Each prompt includes contextual tags, and the site offers comprehensive search functionality based on content, tags, or users. This project highlights effective data handling and a user-friendly experience for sharing and discovering prompts.",
@@ -20,7 +28,7 @@ const items = [
     website: "https://share-gpt-prompts-alpha.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Notes App",
     img: "/personal-portfolio/notes.png",
     desc: "Developed a note-taking website that allows users to securely store and access their notes anytime by logging in. Each user can only view and manage their own notes, ensuring privacy and security. I used MongoDB to store the notes, implemented a login page, and secured passwords with hashing. The project leverages a tech stack of React for the frontend, and Node.js with Express for the backend.This project highlights my skills in full-stack web development and secure user authentication.",
@@ -28,7 +36,7 @@ const items = [
     website: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "News App",
     img: "/personal-portfolio/rocketnews.png",
     desc: "Developed a dynamic news website using React that fetches and displays news content from various categories via the News API. The site includes a search functionality, allowing users to find news articles related to their queries, and a dark mode feature for enhanced user experience. This project demonstrates my ability to build interactive and user-friendly web applications using React.",
@@ -36,7 +44,7 @@ const items = [
     website: "",
   },
   {
-    id: 5,
+    id: 6,
     title: "AI Image Generation Extension",
     img: "/personal-portfolio/ai-image-gen-extension.png",
     desc: "Developed a Chromium extension that enables users to input text and generate images based on the provided description using OpenAI's image generation API. The extension features a simple and intuitive user interface for inputting text and displays the generated images directly within the extension. This project showcases my skills in creating browser extensions and integrating advanced APIs to provide a seamless and interactive user experience.",

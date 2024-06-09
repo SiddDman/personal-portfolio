@@ -43,3 +43,15 @@ section{
         @content;
     }
 }
+
+/* New class to disable scroll snapping */
+.no-scroll-snap {
+    scroll-snap-type: none;
+}
+
+@include mobile {
+    html {
+        scroll-snap-type: none;
+        scroll-behavior:auto;
+    }
+}

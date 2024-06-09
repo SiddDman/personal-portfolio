@@ -7,7 +7,7 @@ import LogoModel from "./logos/LogoModel";
 import CanvasLoader from "./logos/CanvasLoader";
 const technologies = [
   {
-    id: 2,
+    id: 1,
     name: "NextJs",
     icon: "/personal-portfolio/nextjs.png",
   },
@@ -27,6 +27,11 @@ const technologies = [
     icon: "/personal-portfolio/mongodb.png",
   },
   {
+    id: 17,
+    name: "TypeScript",
+    icon: "/personal-portfolio/typescript.png",
+  },
+  {
     id: 5,
     name: "HTML",
     icon: "/personal-portfolio/html.png",
@@ -42,12 +47,7 @@ const technologies = [
     icon: "/personal-portfolio/javascript.png",
   },
   {
-    id: 17,
-    name: "TypeScript",
-    icon: "/personal-portfolio/typescript.png",
-  },
-  {
-    id: 17,
+    id: 18,
     name: "Tailwind CSS",
     icon: "/personal-portfolio/tailwind.png",
   },
