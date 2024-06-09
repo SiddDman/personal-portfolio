@@ -113,7 +113,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        <img src="/personal-portfolio/hero.png" alt="" />
+        <img src="/personal-portfolio/hero.webp" alt="" />
       </motion.div>
     </div>
   );
