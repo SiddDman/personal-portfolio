@@ -15,7 +15,7 @@ const items = [
     id: 2,
     title: "Meet Ease",
     img: "/personal-portfolio/meet-ease.webp",
-    desc: "Video Calling Platform for you to contact clients and friends.",
+    desc: "Developed an enterprise-ready video conferencing app using Next.js, TypeScript, and tools like Stream and Tailwind CSS. Implemented robust user management with Clerk for secure sign-in, sign-up, and protected routes, customizing its appearance and URLs. Designed an intuitive UI, featuring a full-screen layout for meetings, and utilized dynamic routes in Next.js for versatile URLs. Integrated Stream for high-quality video and audio meetings, creating server-side functions for authentication and secret key access. Implemented features for users to view upcoming meetings, past meetings, recordings, and access their personal rooms for a seamless experience. Deployed the application on Vercel, ensuring comprehensive support for both managed and self-hosted environments.",
     github_link: "https://github.com/SiddDman/MeetEase",
     website: "https://meet-ease-phi.vercel.app/",
   },
