@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment, Preload } from "@react-three/drei";
 import LogoModel from "./logos/LogoModel";
 import CanvasLoader from "./logos/CanvasLoader";
+
 const technologies = [
   {
     id: 1,
