@@ -8,8 +8,9 @@ const items = [
     title: "Multi Node Hadoop Cluster and MapReduce",
     img: "/personal-portfolio/hadoop.webp",
     desc: "Developed a multi-node Hadoop cluster project with one master VM and three slave VMs, all running on Ubuntu Server. I configured the VM settings, network properties, and essential configuration files to execute HDFS commands. IP addresses were mapped to hostnames, and SSH keys were copied to the slave VMs for seamless access. I set the replication factor to 2, ensuring data redundancy across two slave VMs. The project included implementing a MapReduce job for Word Count, utilizing Java, Hadoop, and Linux. This project showcases my skills in big data infrastructure setup and distributed computing.",
-    github_link: "",
-    website: "",
+    github_link:
+      "https://docs.google.com/document/d/1gWLlMBr96HJnkWsXyHkFN0UaqNokG3sTZGxMec_C_uc/edit?usp=sharing",
+    website: "https://youtu.be/8mBPeT00xsM?si=3wWJ5c4ddyNhK6sk",
   },
   {
     id: 2,
@@ -77,7 +78,9 @@ const Single = ({ item }) => {
                     opacity: `${item.github_link === "" ? 0 : 1}`,
                   }}
                 >
-                  See Code
+                  {item.title === "Multi Node Hadoop Cluster and MapReduce"
+                    ? "Documentation"
+                    : "See Code"}
                 </button>
               </a>
               <a href={item.website} target="_blank" rel="noreferrer">
@@ -86,7 +89,9 @@ const Single = ({ item }) => {
                     opacity: `${item.website === "" ? 0 : 1}`,
                   }}
                 >
-                  Visit
+                  {item.title === "Multi Node Hadoop Cluster and MapReduce"
+                    ? "Video"
+                    : "Visit"}
                 </button>
               </a>
             </div>
