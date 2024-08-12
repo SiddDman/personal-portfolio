@@ -22,11 +22,11 @@ const items = [
   },
   {
     id: 3,
-    title: "Prompt Share",
-    img: "/personal-portfolio/prompt-share.webp",
+    title: "Docu Verse",
+    img: "/personal-portfolio/docuverse.webp",
     desc: "Developed a prompt sharing website using Next.js and Tailwind CSS, featuring a simple and intuitive user interface. Integrated MongoDB for efficient prompt storage and management. Utilized Google OAuth for secure user authentication. The homepage displays all prompts, allowing users to copy them easily. Users can view prompts specific to them or others, and manage their prompts by editing or deleting them in the profile section. Each prompt includes contextual tags, and the site offers comprehensive search functionality based on content, tags, or users. This project highlights effective data handling and a user-friendly experience for sharing and discovering prompts.",
-    github_link: "https://github.com/SiddDman/share-gpt-prompts",
-    website: "https://share-gpt-prompts-alpha.vercel.app/",
+    github_link: "https://github.com/SiddDman/docu-verse",
+    website: "https://docu-verse-sidd.vercel.app/",
   },
   {
     id: 4,
