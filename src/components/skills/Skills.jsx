@@ -163,7 +163,7 @@ const Skills = () => {
             </motion.b>
           </h1>
           <a
-            href="https://drive.google.com/file/d/17em8BXyc51If7lYkUQysxAzNZKeg_x5N/view?usp=sharing"
+            href="https://drive.google.com/file/d/12DtDTxX0bc2lYmORNYnyWypc6XyNqpZa/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >

@@ -24,7 +24,7 @@ const items = [
     id: 3,
     title: "Docu Verse",
     img: "/personal-portfolio/docuverse.webp",
-    desc: "Developed a prompt sharing website using Next.js and Tailwind CSS, featuring a simple and intuitive user interface. Integrated MongoDB for efficient prompt storage and management. Utilized Google OAuth for secure user authentication. The homepage displays all prompts, allowing users to copy them easily. Users can view prompts specific to them or others, and manage their prompts by editing or deleting them in the profile section. Each prompt includes contextual tags, and the site offers comprehensive search functionality based on content, tags, or users. This project highlights effective data handling and a user-friendly experience for sharing and discovering prompts.",
+    desc: "Developed a collaborative text editor using Next.js, TypeScript, and Tailwind CSS, incorporating responsive design principles. The editor features real-time collaboration powered by the Liveblocks SDK, allowing users to see shared cursors and avatars within the document. I integrated Lexical for rich text editing and implemented user authentication with Clerk, along with bug tracking via Sentry. The application also includes notifications for mentions and document access, as well as role-based permissions, enabling users to assign editor or viewer access and add comments within the editor interface.",
     github_link: "https://github.com/SiddDman/docu-verse",
     website: "https://docu-verse-sidd.vercel.app/",
   },
