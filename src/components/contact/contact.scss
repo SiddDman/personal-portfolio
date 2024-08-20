@@ -64,6 +64,7 @@
             position: absolute;
             margin: auto;
             z-index: -1;
+            object-position:right;
             
             @include mobile{
                 object-fit: contain;
