@@ -28,14 +28,14 @@ const items = [
     github_link: "https://github.com/SiddDman/docu-verse",
     website: "https://docu-verse-sidd.vercel.app/",
   },
-  {
-    id: 4,
-    title: "Notes App",
-    img: "/personal-portfolio/notes.webp",
-    desc: "Developed a note-taking website that allows users to securely store and access their notes anytime by logging in. Each user can only view and manage their own notes, ensuring privacy and security. I used MongoDB to store the notes, implemented a login page, and secured passwords with hashing. The project leverages a tech stack of React for the frontend, and Node.js with Express for the backend.This project highlights my skills in full-stack web development and secure user authentication.",
-    github_link: "https://github.com/SiddDman/Notes_APP_React",
-    website: "",
-  },
+  // {
+  //   id: 4,
+  //   title: "Notes App",
+  //   img: "/personal-portfolio/notes.webp",
+  //   desc: "Developed a note-taking website that allows users to securely store and access their notes anytime by logging in. Each user can only view and manage their own notes, ensuring privacy and security. I used MongoDB to store the notes, implemented a login page, and secured passwords with hashing. The project leverages a tech stack of React for the frontend, and Node.js with Express for the backend.This project highlights my skills in full-stack web development and secure user authentication.",
+  //   github_link: "https://github.com/SiddDman/Notes_APP_React",
+  //   website: "",
+  // },
   {
     id: 5,
     title: "News App",

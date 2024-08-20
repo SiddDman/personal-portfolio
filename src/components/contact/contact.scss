@@ -94,6 +94,7 @@
                 background-color: orange;
                 cursor: pointer;
                 font-weight: 500;
+                border-radius: 5px;
                 
                 @include mobile{
                     padding: 10px;
