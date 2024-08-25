@@ -95,6 +95,7 @@ const Hero = () => {
               animate="scrollButton"
               src="/personal-portfolio/scroll.png"
               alt=""
+              loading="eager"
             />
           </a>
         </motion.div>
@@ -113,7 +114,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        <img src="/personal-portfolio/hero.webp" alt="" />
+        <img src="/personal-portfolio/hero.webp" alt="" loading="eager" />
       </motion.div>
     </div>
   );
