@@ -1,129 +1,126 @@
 @import "../../app.scss";
 
-.portfolio{
-    position: relative;
+.portfolio {
+  position: relative;
 
-    .progress{
-        position:sticky;
-        top:0;
-        left: 0;
-        padding-top: 50px;
-        text-align: center;
-        color: orange;
-        font-size: 36px;
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 36px;
 
-        @include mobile{
-            padding-top:calc(100vh - 100px) ;
-            font-size: 24px;
-        }
-
-        .progressBar{
-            height: 10px;
-            background-color: white;
-        }
+    @include mobile {
+      padding-top: calc(100vh - 100px);
+      font-size: 24px;
     }
 
-    .container{
+    .progressBar {
+      height: 10px;
+      background-color: white;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .imageContainer {
+        flex: 1;
+        width: 60%;
+        height: 53%;
+        margin-top: 50px;
+
+        @include mobile {
+          width: 100%;
+          max-height: 300px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+
+          @include mobile {
+            object-fit: contain;
+          }
+        }
+      }
+
+      .textContainer {
+        flex: 1;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        
-        .wrapper{
-            max-width: 1366px;
-            height: 100%;
-            margin: auto;
-            display: flex;
-            gap:50px;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            
-            @include mobile{
-                flex-direction: column;
-                gap:10px
-            }
-            
-            
-            .imageContainer{
-                flex:1;
-                width: 60%;
-                height: 53%;
-                margin-top: 50px;
-                                
-                @include mobile{
-                    width: 100%;
-                    max-height:300px ;
-                }
-                
-                img{
-                    width: 100%;
-                    height:100%;
-                    object-fit: contain;
-                    
-                    @include mobile{
-                        object-fit: contain;
-                    }
-                }
-            }
-            
-            .textContainer{
-                flex:1;
-                display: flex;
-                flex-direction: column;
-                gap:30px;
+        flex-direction: column;
+        gap: 30px;
 
-                @include mobile{
-                    transform: none !important ;
-                    padding: 10px;
-                    align-items: center;
-                    text-align: center;
-                }
-                
-                h2{
-                    font-size: 50px;
-
-                    @include mobile{
-                        font-size: 36px;
-                    }
-                }
-                
-                p{
-                    color: gray;
-                    font-size: 18px;
-                    line-height: 25px;
-                    font-family: "Merriweather",sans-serif;
-                    
-                    @include mobile{
-                        font-size: 12px;
-                    }
-                }
-                
-                .btn_container{
-                    
-                    display: flex;
-                    flex-direction: row;
-                    gap:30px;
-                    
-                    button{
-                        background-color: orange;
-                        border: none;
-                        border-radius: 10px;
-                        padding: 10px;
-                        width: 200px;
-                        cursor: pointer;
-                        font-size: 20px;
-                        font-family: "Poppins",sans-serif;
-                        font-weight: 400;
-                    }
-                    
-                    button:hover {
-                        background-color: #ff6f00;
-                    }
-                }
-                
-            }
+        @include mobile {
+          transform: none !important;
+          padding: 10px;
+          align-items: center;
+          text-align: center;
         }
+
+        h2 {
+          font-size: 50px;
+
+          @include mobile {
+            font-size: 36px;
+          }
+        }
+
+        p {
+          color: gray;
+          font-size: 18px;
+          line-height: 25px;
+          font-family: "Merriweather", sans-serif;
+
+          @include mobile {
+            font-size: 12px;
+          }
+        }
+
+        .btn_container {
+          display: flex;
+          flex-direction: row;
+          gap: 30px;
+
+          button {
+            background-color: orange;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            cursor: pointer;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+          }
+
+          button:hover {
+            background-color: #ff6f00;
+          }
+        }
+      }
     }
+  }
 }

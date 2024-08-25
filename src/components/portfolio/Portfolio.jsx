@@ -1,6 +1,7 @@
 import "./portfolio.scss";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useEffect } from "react";
 
 const items = [
   {
@@ -52,13 +53,27 @@ const items = [
     github_link: "https://github.com/SiddDman/ai-image-gen-extension",
     website: "",
   },
+  {
+    id: 7,
+    title: "Education",
+    img: "/personal-portfolio/iit_dhn.webp",
+    desc: `I have completed my Bachelor of Technology from Indian Institute of Technology(Indian School of Mines) and securing a good rank in JEE Advanced. I obtained 91% in 12th standard and 10 CGPA in 10th standard. I have a keen interest in the fields of web development and game development, and I have acquired various skills and technologies related to these domains. I am proficient in C++ and C and have good knowledge of JavaScript, MySQL, React, and MongoDB. I gained some experience with C#, Blender, and Unity from University of Colorado's Game Development Certification. After completion I made a basic 3D endless runner game and some 2D games. I learned Data Analytics from Google's Data Analytics Certification and gained skills like Data Collection, Data Cleaning, Data Processing, Data Analysis and Data Visualization. Along the way I learned Microsoft Excel/Google Sheets, R Programming and Tableau. I was a member of the Animation and Game Design Club of my college, where I organized and participated in various events and workshops to share new ideas with the students.`,
+    github_link: "",
+    website: "",
+  },
 ];
 
-const Single = ({ item }) => {
+const Single = ({ item, index, lastItemRef }) => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
   });
+
+  useEffect(() => {
+    if (index === items.length - 1) {
+      lastItemRef.current = ref.current;
+    }
+  }, [index, lastItemRef]);
 
   const y = useTransform(scrollYProgress, [0, 1], [-500, 450]);
   return (
@@ -69,7 +84,9 @@ const Single = ({ item }) => {
             <img src={item.img} alt="" />
           </div>
           <motion.div className="textContainer" style={{ y }}>
-            <h2>{item.title}</h2>
+            <h2 style={{ opacity: `${item.title === "Education" ? 0 : 1}` }}>
+              {item.title}
+            </h2>
             <p>{item.desc}</p>
             <div className="btn_container">
               <a href={item.github_link} target="_blank" rel="noreferrer">
@@ -104,6 +121,9 @@ const Single = ({ item }) => {
 
 const Portfolio = () => {
   const ref = useRef();
+  const lastItemRef = useRef();
+  const [isLastItemVisible, setIsLastItemVisible] = useState(false);
+  const [isPastLastItem, setIsPastLastItem] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -112,17 +132,61 @@ const Portfolio = () => {
 
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
-    damping: 30,
+    damping: 10,
   });
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (lastItemRef.current) {
+  //       const rect = lastItemRef.current.getBoundingClientRect();
+  //       setIsLastItemVisible(
+  //         rect.top <= window.innerHeight && rect.bottom >= 0
+  //       );
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (lastItemRef.current) {
+        const rect = lastItemRef.current.getBoundingClientRect();
+        const inView = rect.top <= window.innerHeight && rect.bottom >= 0;
+        setIsLastItemVisible(inView);
+        setIsPastLastItem(rect.top < 0); // Check if the last item is scrolled past
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        <h1>Featured Works</h1>
+        {/* <h1>Featured Works</h1> */}
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50, transition: { duration: 0.001 } }}
+          transition={{ duration: 0.5 }}
+        >
+          {isLastItemVisible | isPastLastItem ? "Education" : "Featured Works"}
+        </motion.h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
-      {items.map((item) => (
-        <Single item={item} key={item.id} />
+      {items.map((item, index) => (
+        <Single
+          item={item}
+          key={item.id}
+          index={index}
+          lastItemRef={lastItemRef}
+        />
       ))}
     </div>
   );
