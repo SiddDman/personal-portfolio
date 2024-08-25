@@ -135,21 +135,6 @@ const Portfolio = () => {
     damping: 20,
   });
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (lastItemRef.current) {
-  //       const rect = lastItemRef.current.getBoundingClientRect();
-  //       setIsLastItemVisible(
-  //         rect.top <= window.innerHeight && rect.bottom >= 0
-  //       );
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   useEffect(() => {
     const handleScroll = () => {
       if (lastItemRef.current) {
