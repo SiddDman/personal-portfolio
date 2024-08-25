@@ -81,7 +81,7 @@ const Single = ({ item, index, lastItemRef }) => {
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt="" loading="lazy" />
+            <img src={item.img} alt="" />
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2 style={{ opacity: `${item.title === "Education" ? 0 : 1}` }}>

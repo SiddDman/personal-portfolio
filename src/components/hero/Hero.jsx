@@ -114,7 +114,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        <img src="/personal-portfolio/hero.webp" alt="" loading="eager" />
+        <img src="/personal-portfolio/hero.webp" alt="" />
       </motion.div>
     </div>
   );
