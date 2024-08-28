@@ -44,11 +44,11 @@ const sliderVariants = {
     x: 0,
   },
   animate: {
-    x: "-700%",
+    x: "-400%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
-      duration: 15,
+      duration: 7,
     },
   },
 };
@@ -73,9 +73,9 @@ const Hero = () => {
                 loop={true}
                 cursor
                 cursorStyle="|"
-                typeSpeed={70}
+                typeSpeed={90}
                 deleteSpeed={50}
-                delaySpeed={1000}
+                delaySpeed={2000}
               />
             </motion.h1>
           </div>
@@ -95,7 +95,6 @@ const Hero = () => {
               animate="scrollButton"
               src="/personal-portfolio/scroll.png"
               alt=""
-              loading="eager"
             />
           </a>
         </motion.div>
@@ -114,7 +113,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        <img src="/personal-portfolio/hero.webp" alt="" />
+        <img src="/personal-portfolio/hero.webp" alt="avatar" />
       </motion.div>
     </div>
   );
