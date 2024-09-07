@@ -44,6 +44,7 @@
 
         h1 {
           font-size: 88px;
+
           @include mobile {
             font-size: 36px;
           }
