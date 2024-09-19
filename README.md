@@ -3,7 +3,7 @@
 Welcome to the repository for my personal portfolio website! This project showcases my skills, experience, and projects, and features dynamic animations and a clean, responsive design.
 
 ## Table of Contents
-- [Demo](#demo)
+- [Deployement](#deployement)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
