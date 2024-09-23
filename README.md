@@ -8,7 +8,7 @@ Welcome to the repository for my personal portfolio website! This project showca
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Set Up](#set-up)
 - [Contact](#contact)
 
 ## Deployement
@@ -60,7 +60,7 @@ The website is a portfolio that showcases my projects and provides information a
 - **Education**: Details about my Education.
 - **Contact**: Ways to reach out to me for collaboration or opportunities.
 
-## Contributing
+## Set Up
 This portfolio is a personal project, but if you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
 1. Fork the repository.
