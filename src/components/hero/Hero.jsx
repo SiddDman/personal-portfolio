@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import "./hero.scss";
+import ImageComponent from "../ImageComponent";
 
 const textVariants = {
   initial: {
@@ -113,7 +114,11 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        <img src="/personal-portfolio/hero.webp" alt="avatar" loading="eager" />
+        {/* <img src="/personal-portfolio/hero.webp" alt="avatar" loading="eager" /> */}
+        <ImageComponent
+          src="/personal-portfolio/hero.webp"
+          hash={"LAEDrIxvyoM_]]ROO_o#x]WVMcs:"}
+        />
       </motion.div>
     </div>
   );
